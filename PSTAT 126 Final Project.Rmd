@@ -96,7 +96,7 @@ ggplot(diamonds_sample, aes(x = clarity)) +
   - I1 is also rare due to lower quality
   - The distribution suggests most diamonds are of moderate clarity, with extreme clarity grades less represented
   
-### Question 3: Correltation
+### Question 3: Correlation
 ```{r}
 # Select only continuous variables
 num_vars <- c("carat", "depth", "table", "price", "x", "y", "z")
@@ -269,7 +269,6 @@ There is strong multicollinearity between carat and x, which is expected since b
 
 ### Question 3: Confidence and Prediction Intervals
 ```{r}
-# Only do this once at the top of your Rmd
 diamonds_sample <- diamonds_sample[ , !names(diamonds_sample) %in% "...1"]
 
 diamonds_sample$cut     <- factor(diamonds_sample$cut)
